@@ -1,0 +1,43 @@
+﻿@page
+@model Tech_Talks_Web_App.Pages.Schedules.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Schedule</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Schedule.Speaker)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Schedule.Speaker.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Schedule.Sponsor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Schedule.Sponsor.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Schedule.Discussion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Schedule.Discussion.Topic)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Schedule.ScheduledTime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Schedule.ScheduledTime)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Schedule.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
